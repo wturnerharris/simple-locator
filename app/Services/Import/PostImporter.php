@@ -123,7 +123,7 @@ class PostImporter
 			$this->failedRow(__('Missing Title', 'wpsimplelocator'));
 			return false;
 		}
-		if ( $this->post_repo->postExists($post['post_title']) ){
+		if ( $this->post_repo->postExists($post) ){
 			$this->failedRow(__('Location Exists', 'wpsimplelocator'));
 			return false;
 		}
